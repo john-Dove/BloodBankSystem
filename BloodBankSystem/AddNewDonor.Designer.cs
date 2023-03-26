@@ -51,7 +51,7 @@
             this.txtCity = new System.Windows.Forms.TextBox();
             this.txtAddress = new System.Windows.Forms.RichTextBox();
             this.txtBloodLitres = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
+            this.labelNewID = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
             this.btnCloce = new System.Windows.Forms.Button();
@@ -288,17 +288,17 @@
             this.txtBloodLitres.Size = new System.Drawing.Size(152, 22);
             this.txtBloodLitres.TabIndex = 21;
             // 
-            // label13
+            // labelNewID
             // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Red;
-            this.label13.Location = new System.Drawing.Point(126, 76);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(21, 24);
-            this.label13.TabIndex = 22;
-            this.label13.Text = "1";
+            this.labelNewID.AutoSize = true;
+            this.labelNewID.BackColor = System.Drawing.Color.Transparent;
+            this.labelNewID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNewID.ForeColor = System.Drawing.Color.Red;
+            this.labelNewID.Location = new System.Drawing.Point(126, 76);
+            this.labelNewID.Name = "labelNewID";
+            this.labelNewID.Size = new System.Drawing.Size(21, 24);
+            this.labelNewID.TabIndex = 22;
+            this.labelNewID.Text = "1";
             // 
             // btnSave
             // 
@@ -312,6 +312,7 @@
             this.btnSave.Text = "Save";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnReset
             // 
@@ -350,7 +351,7 @@
             this.Controls.Add(this.btnCloce);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.label13);
+            this.Controls.Add(this.labelNewID);
             this.Controls.Add(this.txtBloodLitres);
             this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.txtCity);
@@ -377,6 +378,7 @@
             this.Name = "AddNewDonor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddNewDonor";
+            this.Load += new System.EventHandler(this.AddNewDonor_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -406,7 +408,7 @@
         private System.Windows.Forms.TextBox txtCity;
         private System.Windows.Forms.RichTextBox txtAddress;
         private System.Windows.Forms.TextBox txtBloodLitres;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label labelNewID;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Button btnCloce;

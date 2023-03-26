@@ -1,6 +1,6 @@
 ﻿namespace BloodBankSystem
 {
-    partial class Form1
+    partial class LoginFormPage
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginFormPage));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -209,7 +209,7 @@
             this.xuibtnExit.Vertical_Alignment = System.Drawing.StringAlignment.Center;
             this.xuibtnExit.Click += new System.EventHandler(this.xuibtnExit_Click);
             // 
-            // Form1
+            // LoginFormPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -219,7 +219,7 @@
             this.Controls.Add(this.xuibtnExit);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "LoginFormPage";
             this.Text = "Login";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);

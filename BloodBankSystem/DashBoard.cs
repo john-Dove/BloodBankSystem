@@ -12,9 +12,12 @@ namespace BloodBankSystem
 {
     public partial class DashBoard : Form
     {
+        protected readonly BloodBank2Entities BloodOBJ;
         public DashBoard()
         {
             InitializeComponent();
+            BloodOBJ = new BloodBank2Entities();
+
         }
 
         private void xuibtnExit_Click(object sender, EventArgs e)
@@ -29,7 +32,7 @@ namespace BloodBankSystem
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form1 fm = new Form1();     //log out of dashboard and return to logingpage
+            LoginFormPage fm = new LoginFormPage();     //log out of dashboard and return to logingpage
             fm.Show();
             this.Hide();       // close/hide dashboard after showing logout page 
 
