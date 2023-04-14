@@ -32,18 +32,16 @@
             this.xuibtnExit = new XanderUI.XUIButton();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.donorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.patientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.blockStockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewDonorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewDonorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteDonorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.patientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewPatientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updatePAtientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deletePatientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewPatientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.blockStockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.detailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,6 +71,7 @@
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.donorToolStripMenuItem,
             this.patientToolStripMenuItem,
@@ -88,47 +87,12 @@
             // 
             this.donorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addNewDonorToolStripMenuItem,
-            this.updateDetailsToolStripMenuItem,
-            this.viewDonorToolStripMenuItem,
-            this.deleteDonorToolStripMenuItem});
+            this.updateDetailsToolStripMenuItem});
             this.donorToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("donorToolStripMenuItem.Image")));
             this.donorToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.donorToolStripMenuItem.Name = "donorToolStripMenuItem";
             this.donorToolStripMenuItem.Size = new System.Drawing.Size(102, 64);
             this.donorToolStripMenuItem.Text = "Donor";
-            // 
-            // patientToolStripMenuItem
-            // 
-            this.patientToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addNewPatientToolStripMenuItem,
-            this.updatePAtientToolStripMenuItem,
-            this.deletePatientToolStripMenuItem,
-            this.viewPatientToolStripMenuItem});
-            this.patientToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("patientToolStripMenuItem.Image")));
-            this.patientToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.patientToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.White;
-            this.patientToolStripMenuItem.Name = "patientToolStripMenuItem";
-            this.patientToolStripMenuItem.Size = new System.Drawing.Size(106, 64);
-            this.patientToolStripMenuItem.Text = "Patient";
-            // 
-            // blockStockToolStripMenuItem
-            // 
-            this.blockStockToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.detailsToolStripMenuItem});
-            this.blockStockToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("blockStockToolStripMenuItem.Image")));
-            this.blockStockToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.blockStockToolStripMenuItem.Name = "blockStockToolStripMenuItem";
-            this.blockStockToolStripMenuItem.Size = new System.Drawing.Size(130, 64);
-            this.blockStockToolStripMenuItem.Text = "Block Stock";
-            // 
-            // logOutToolStripMenuItem
-            // 
-            this.logOutToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("logOutToolStripMenuItem.Image")));
-            this.logOutToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(122, 64);
-            this.logOutToolStripMenuItem.Text = "Log Out";
-            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
             // addNewDonorToolStripMenuItem
             // 
@@ -145,31 +109,29 @@
             this.updateDetailsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.updateDetailsToolStripMenuItem.Name = "updateDetailsToolStripMenuItem";
             this.updateDetailsToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
-            this.updateDetailsToolStripMenuItem.Text = "Update Donor";
+            this.updateDetailsToolStripMenuItem.Text = "Manage Donors";
+            this.updateDetailsToolStripMenuItem.Click += new System.EventHandler(this.updateDetailsToolStripMenuItem_Click);
             // 
-            // viewDonorToolStripMenuItem
+            // patientToolStripMenuItem
             // 
-            this.viewDonorToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("viewDonorToolStripMenuItem.Image")));
-            this.viewDonorToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.viewDonorToolStripMenuItem.Name = "viewDonorToolStripMenuItem";
-            this.viewDonorToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
-            this.viewDonorToolStripMenuItem.Text = "Delete Donor";
-            this.viewDonorToolStripMenuItem.Click += new System.EventHandler(this.viewDonorToolStripMenuItem_Click);
-            // 
-            // deleteDonorToolStripMenuItem
-            // 
-            this.deleteDonorToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("deleteDonorToolStripMenuItem.Image")));
-            this.deleteDonorToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.deleteDonorToolStripMenuItem.Name = "deleteDonorToolStripMenuItem";
-            this.deleteDonorToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
-            this.deleteDonorToolStripMenuItem.Text = "View Donor";
+            this.patientToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addNewPatientToolStripMenuItem,
+            this.updatePAtientToolStripMenuItem,
+            this.deletePatientToolStripMenuItem,
+            this.viewPatientToolStripMenuItem});
+            this.patientToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("patientToolStripMenuItem.Image")));
+            this.patientToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.patientToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.White;
+            this.patientToolStripMenuItem.Name = "patientToolStripMenuItem";
+            this.patientToolStripMenuItem.Size = new System.Drawing.Size(106, 64);
+            this.patientToolStripMenuItem.Text = "Patient";
             // 
             // addNewPatientToolStripMenuItem
             // 
             this.addNewPatientToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("addNewPatientToolStripMenuItem.Image")));
             this.addNewPatientToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.addNewPatientToolStripMenuItem.Name = "addNewPatientToolStripMenuItem";
-            this.addNewPatientToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.addNewPatientToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.addNewPatientToolStripMenuItem.Text = "Add New Patient";
             // 
             // updatePAtientToolStripMenuItem
@@ -177,7 +139,7 @@
             this.updatePAtientToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("updatePAtientToolStripMenuItem.Image")));
             this.updatePAtientToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.updatePAtientToolStripMenuItem.Name = "updatePAtientToolStripMenuItem";
-            this.updatePAtientToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.updatePAtientToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.updatePAtientToolStripMenuItem.Text = "Update Patient";
             // 
             // deletePatientToolStripMenuItem
@@ -185,7 +147,7 @@
             this.deletePatientToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("deletePatientToolStripMenuItem.Image")));
             this.deletePatientToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.deletePatientToolStripMenuItem.Name = "deletePatientToolStripMenuItem";
-            this.deletePatientToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.deletePatientToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.deletePatientToolStripMenuItem.Text = "Delete Patient";
             // 
             // viewPatientToolStripMenuItem
@@ -193,16 +155,35 @@
             this.viewPatientToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("viewPatientToolStripMenuItem.Image")));
             this.viewPatientToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.viewPatientToolStripMenuItem.Name = "viewPatientToolStripMenuItem";
-            this.viewPatientToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.viewPatientToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.viewPatientToolStripMenuItem.Text = "View Patient";
+            // 
+            // blockStockToolStripMenuItem
+            // 
+            this.blockStockToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.detailsToolStripMenuItem});
+            this.blockStockToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("blockStockToolStripMenuItem.Image")));
+            this.blockStockToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.blockStockToolStripMenuItem.Name = "blockStockToolStripMenuItem";
+            this.blockStockToolStripMenuItem.Size = new System.Drawing.Size(130, 64);
+            this.blockStockToolStripMenuItem.Text = "Block Stock";
             // 
             // detailsToolStripMenuItem
             // 
             this.detailsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("detailsToolStripMenuItem.Image")));
             this.detailsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.detailsToolStripMenuItem.Name = "detailsToolStripMenuItem";
-            this.detailsToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.detailsToolStripMenuItem.Size = new System.Drawing.Size(113, 26);
             this.detailsToolStripMenuItem.Text = "Details";
+            // 
+            // logOutToolStripMenuItem
+            // 
+            this.logOutToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("logOutToolStripMenuItem.Image")));
+            this.logOutToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(122, 64);
+            this.logOutToolStripMenuItem.Text = "Log Out";
+            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
             // DashBoard
             // 
@@ -235,8 +216,6 @@
         private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addNewDonorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateDetailsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewDonorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem deleteDonorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addNewPatientToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updatePAtientToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deletePatientToolStripMenuItem;

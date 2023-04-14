@@ -44,5 +44,13 @@ namespace BloodBankSystem
             AddNewDonor and = new AddNewDonor();
             and.Show();
         }
+
+        private void updateDetailsToolStripMenuItem_Click(object sender, EventArgs e) // Manage Donor
+        {
+            UpdateDonorDetails udd = new UpdateDonorDetails();
+            //udd.MdiParent = this;                 showing error when used
+            udd.Show();
+            
+        }
     }
 }

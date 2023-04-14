@@ -46,47 +46,86 @@ namespace BloodBankSystem
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            String dfname = txtfname.Text;
-            String dlname = txtlname.Text;
-            DateTime dDOB = txtDOB.Value;
-            String dphone = txtphone.Text;
-            var dgen = txtgender.SelectedItem.ToString();
-            String dema = txtemail.Text;
-            String dgroup = txtBloodGroup.SelectedItem.ToString();
-            int dquan = Convert.ToInt32(txtBloodLitres.Text);
-            String dcity = txtCity.Text;
-            String dadd = txtAddress.Text;
-
-            bool isValid = true;
-
-            if(String.IsNullOrWhiteSpace(dfname) || String.IsNullOrWhiteSpace(dlname) 
-                || String.IsNullOrWhiteSpace(dgen) || String.IsNullOrWhiteSpace(dgroup))
+            try
             {
-                isValid = false;
-                MessageBox.Show("Please enter missing data");
+                string dfname = txtfname.Text;
+                string dlname = txtlname.Text;
+                DateTime dDOB = Convert.ToDateTime(txtDOB.Text);                  //DateTime dDOB = txtDOB.Value;    ToString("yyyy-MM-dd")           DateTime dDOB = Convert.ToDateTime(txtDOB);
+                string dphone = txtphone.Text;
+                //var dgen = txtgender.SelectedItem.ToString();         //these were throwing some exception thingy's
+                var dgen = txtgender.Text;
+
+                string dema = txtemail.Text;
+                string dgroup = txtBloodGroup.Text;
+                //string dgroup = txtBloodGroup.SelectedItem.ToString();
+                int dquan = Convert.ToInt32(txtBloodLitres.Text);
+                string dcity = txtCity.Text;
+                string dadd = txtAddress.Text;
+
+                bool isValid = true;
+                var errMessage = "";
+
+                if (string.IsNullOrWhiteSpace(dfname) || string.IsNullOrWhiteSpace(dlname)
+                    )
+                {
+                    isValid = false;
+                    errMessage += "Error: Please enter missing data. \n\r";
+                }
+
+
+               if (dDOB > DateTime.Now)
+                {
+                    isValid = false;
+                    errMessage += "Error: Illegal Date Selection. \n\r";
+                }
+
+
+                if (isValid)
+                {
+                    // saving data to database
+                    var blb = new NewDonor();     //creating new record
+                    blb.fname = dfname;             //database field name = winforms name
+                    blb.lname = dlname;
+                    blb.DOB = Convert.ToString(dDOB);           //if issues arise with these two fields, the conversion style nee changing
+                    blb.telephone = Convert.ToInt64(dphone);
+                    //blb.telephone = int.Parse(dphone.Text);
+                    blb.gender = dgen;
+                    blb.email = dema;
+                    blb.bloodgroup = dgroup;
+                    blb.bloodQuantity = dquan;
+                    blb.city = dcity;
+                    blb.bAddress = dadd;
+
+                    BloodOBJ.NewDonors.Add(blb);        //adding data to table
+                    BloodOBJ.SaveChanges();
+
+
+
+                    MessageBox.Show($"Successfully Inserted" +                                    
+                                    $"YOUR BLOOD WILL SAVE A LIFE");
+
+                }
+                else
+                {
+                    MessageBox.Show(errMessage);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                //throw;
             }
 
-            
-            if(dDOB > DateTime.Now)
-            {
-                isValid = false;
-                MessageBox.Show("Illegal Date Selection");
-            }
 
-
-            if (isValid)
-            {
-                MessageBox.Show($"Name: {dfname}+ {dlname}\n\r" +
-                                $"Gender: {dgen}\n\r" +
-                                $"Blood Type: {dgroup}\n\r" +
-                                $"Blood Quantity: {dquan}\n\r" +
-                                $"YOUR BLOOD WILL SAVE A LIFE");
-
-            }
             
 
 
 
         }
+
+        
+
+
     }
 }
