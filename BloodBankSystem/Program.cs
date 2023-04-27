@@ -16,7 +16,7 @@ namespace BloodBankSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DashBoard());   //this was changed from form 1
+            Application.Run(new LoginFormPage());   //this was changed from form 1
         }
     }
 }

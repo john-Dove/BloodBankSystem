@@ -72,7 +72,7 @@ namespace BloodBankSystem
             {
                 var DonerDELETE = new DEditing();
                 DonerDELETE.MdiParent = this.MdiParent;
-                DonerDELETE.Show();
+                //DonerDELETE.Show();
 
 
                 //get Id of selected row

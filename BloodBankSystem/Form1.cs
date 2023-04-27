@@ -51,7 +51,7 @@ namespace BloodBankSystem
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if(txtUsername.Text == "thetitguy" && txtPassword.Text =="pass")
+            if(txtUsername.Text == "hokipoki" && txtPassword.Text =="pass")
             {
                 DashBoard dash = new DashBoard();
                 dash.Show();

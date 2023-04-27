@@ -52,7 +52,7 @@
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(330, 355);
+            this.btnDelete.Location = new System.Drawing.Point(227, 355);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(84, 33);
             this.btnDelete.TabIndex = 71;
@@ -66,7 +66,7 @@
             this.btnCloce.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCloce.Image = ((System.Drawing.Image)(resources.GetObject("btnCloce.Image")));
             this.btnCloce.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCloce.Location = new System.Drawing.Point(603, 355);
+            this.btnCloce.Location = new System.Drawing.Point(581, 355);
             this.btnCloce.Name = "btnCloce";
             this.btnCloce.Size = new System.Drawing.Size(84, 33);
             this.btnCloce.TabIndex = 69;
@@ -80,7 +80,7 @@
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(167, 355);
+            this.btnSave.Location = new System.Drawing.Point(69, 355);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(82, 33);
             this.btnSave.TabIndex = 67;
@@ -105,11 +105,11 @@
             this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnReset.Image = ((System.Drawing.Image)(resources.GetObject("btnReset.Image")));
             this.btnReset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReset.Location = new System.Drawing.Point(467, 355);
+            this.btnReset.Location = new System.Drawing.Point(400, 355);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(81, 33);
             this.btnReset.TabIndex = 73;
-            this.btnReset.Text = "Reset";
+            this.btnReset.Text = "Refresh";
             this.btnReset.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
@@ -128,7 +128,7 @@
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.dvgridDon);
             this.Name = "ManageDonor";
-            this.Text = "ManageDonor";
+            this.Text = "Manage Donor";
             this.Load += new System.EventHandler(this.ManageDonor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dvgridDon)).EndInit();
             this.ResumeLayout(false);

@@ -17,7 +17,7 @@ namespace BloodBankSystem
         public DEditing()
         {
             InitializeComponent();
-            lblTitle.Text = "Edit/Update Donor";
+            //lblTitle.Text = "Edit/Update Donor";
             //isEditMode = false;
             BloodOBJ = new BloodBank2Entities();
         }
@@ -25,7 +25,7 @@ namespace BloodBankSystem
         public DEditing(NewDonor editDonor)
         {
             InitializeComponent();
-            lblTitle.Text = "Edit/Update Donor";
+            //lblTitle.Text = "Edit/Update Donor";
             //isEditMode = true;
             LoadData(editDonor);
             BloodOBJ = new BloodBank2Entities();
@@ -34,7 +34,7 @@ namespace BloodBankSystem
 
         private void LoadData(NewDonor Dono)
         {
-            lblTitle.Text = Dono.ID.ToString();
+            //lblTitle.Text = Dono.ID.ToString();
             txtfname.Text = Dono.fname;
             txtlname.Text = Dono.lname;
             txtCity.Text = Dono.city;
@@ -59,10 +59,11 @@ namespace BloodBankSystem
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-           
-                //Editing/Updating codes
-                var id = int.Parse(lblTitle2.Text);
-                var Dono = BloodOBJ.NewDonors.FirstOrDefault(q => q.ID == id);
+            try 
+            {
+                 //Editing/Updating codes
+                //var id = int.Parse(lblTitle.Text);
+                var Dono = BloodOBJ.NewDonors.FirstOrDefault();      //q => q.ID == id)
                 Dono.fname = txtfname.Text;
                 Dono.lname = txtlname.Text;
                 Dono.email = txtemail.Text;
@@ -72,11 +73,18 @@ namespace BloodBankSystem
                 Dono.city = txtCity.Text;
                 Dono.bAddress = txtAddress.Text;
                 Dono.bloodQuantity = int.Parse(txtBloodLitres.Text);
-                Dono.DOB = txtDOB.Text;                                 //might cause issues when updating
+                //Dono.DOB = txtDOB.Text;                                 //might cause issues when updating
 
                 BloodOBJ.SaveChanges();
                 MessageBox.Show("Successfullt Saved...");
-
+            
+            }
+            catch(Exception ex) 
+            {
+                MessageBox.Show($"Error: {ex.Message}");
+            }
+           
+               
             /*if(isEditMode)
             {
 

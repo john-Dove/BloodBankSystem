@@ -124,8 +124,19 @@ namespace BloodBankSystem
 
         }
 
-        
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            txtfname.Clear();
+            txtlname.Clear();
+            txtDOB.ResetText();
+            txtphone.ResetText();
+            txtgender.ResetText();
+            txtemail.Clear();
+            txtBloodGroup.ResetText();
+            txtBloodLitres.Clear();
+            txtCity.Clear();            
+            txtAddress.ResetText();
 
-
+        }
     }
 }
