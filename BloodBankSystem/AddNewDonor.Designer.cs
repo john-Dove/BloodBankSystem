@@ -217,7 +217,7 @@
             this.txtgender.Items.AddRange(new object[] {
             "Male",
             "Female",
-            "Fish"});
+            "Other"});
             this.txtgender.Location = new System.Drawing.Point(111, 306);
             this.txtgender.Name = "txtgender";
             this.txtgender.Size = new System.Drawing.Size(163, 24);
